@@ -1,0 +1,6 @@
+# 테스트에서는 OpenAI 비활성화 (규칙 기반 분류기 사용)
+# MongoDB 연결은 Testcontainers(@ServiceConnection)가 런타임에 주입한다.
+mealplan:
+  ai:
+    openai:
+      enabled: false

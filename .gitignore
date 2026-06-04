@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+
+# Secrets / env (safety net for the whole repo)
+**/secrets/
+*.env
+*.key
+*.pem
+credentials*
+
+# Backend (Gradle)
+**/.gradle/
+**/build/
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# Frontend (Node)
+**/node_modules/
+**/dist/
+**/dist-ssr/
+*.local
+*.tsbuildinfo
+coverage/
+.vite/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.log

@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+/* 디자인 토큰 — qshop.ai 류의 밝고 모던한 톤 참고 (외관만 참고) */
+@theme {
+  --color-brand-50: #eefcf4;
+  --color-brand-100: #d6f6e3;
+  --color-brand-200: #b0ecc9;
+  --color-brand-300: #7bdca8;
+  --color-brand-400: #43c382;
+  --color-brand-500: #1fa968;
+  --color-brand-600: #128a54;
+  --color-brand-700: #0f6e45;
+  --color-brand-800: #105738;
+  --color-brand-900: #0e4730;
+
+  --color-ink-900: #121417;
+  --color-ink-700: #353b41;
+  --color-ink-500: #6b7480;
+  --color-ink-300: #aab2bd;
+
+  --font-sans: 'Pretendard', system-ui, -apple-system, 'Apple SD Gothic Neo',
+    'Malgun Gothic', sans-serif;
+
+  --radius-card: 1.25rem;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink-900);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #e7faf0 0%, transparent 60%),
+    radial-gradient(900px 500px at 0% 0%, #eef4ff 0%, transparent 55%),
+    #f7f9fb;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}

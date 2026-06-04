@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: meal-plan
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/mealplan}
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8080
+
+# AI 분류기 설정.
+# 기본은 규칙 기반(오프라인) 분류기. OpenAI 를 쓰려면 enabled=true 와 API 키를 환경변수로 주입.
+mealplan:
+  ai:
+    openai:
+      enabled: ${OPENAI_ENABLED:false}
+      api-key: ${OPENAI_API_KEY:}
+      model: ${OPENAI_MODEL:gpt-4o-mini}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+
+logging:
+  level:
+    com.mealplan: INFO
